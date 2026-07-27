@@ -1,0 +1,39 @@
+/* Ajustes finais de publicação: controles de carrossel sempre acessíveis. */
+html,
+body {
+  overflow-x: clip;
+}
+
+[data-testid="button-carousel-prev"] {
+  left: 0.5rem !important;
+}
+
+[data-testid="button-carousel-next"] {
+  right: 0.5rem !important;
+}
+
+/* O contato por e-mail não faz parte da versão pública do rodapé. */
+footer p:nth-child(2) {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  [data-testid="button-carousel-prev"] {
+    left: 0 !important;
+  }
+
+  [data-testid="button-carousel-next"] {
+    right: 0 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
