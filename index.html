@@ -2,41 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <!-- Tags de marketing adiadas até a página principal terminar de carregar. -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      window.addEventListener('load', function () {
-        var gtagScript = document.createElement('script');
-        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-953761327';
-        gtagScript.async = true;
-        document.head.appendChild(gtagScript);
-        gtag('js', new Date());
-        gtag('config', 'AW-953761327');
-      }, { once: true });
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "xtjzc11ri7");
     </script>
-
-    <!-- Meta Pixel Code -->
-    <script>
-    window.addEventListener('load', function () {
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=true;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1648315026236616');
-      fbq('track', 'PageView');
-    }, { once: true });
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1648315026236616&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#7c3aed">
     <title>Guía de Proyectos de Robótica - Versión 2026</title>
@@ -54,10 +26,12 @@
       [data-testid="button-carousel-next"] { right: .5rem !important; }
       footer p:nth-child(2) { display: none; }
       @media (min-width: 768px) { [data-testid="button-carousel-prev"] { left: 0 !important; } [data-testid="button-carousel-next"] { right: 0 !important; } }
+      @supports (content-visibility: auto) {
+        [data-testid="section-problem"], [data-testid="section-testimonials"], [data-testid="section-faq"], [data-testid="section-learning-outcomes"], [data-testid="section-guarantee-text"], [data-testid="section-bonus-header"], [data-testid="section-bonus-1"] { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+      }
       @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
     </style>
-    <script type="module" crossorigin="" src="/assets/index-video-fix.js"></script>
-    <script defer src="/assets/checkout-config-v2.js"></script>
+    <script type="module" crossorigin="" src="/assets/index-performance.js"></script>
     <link rel="preload" as="style" crossorigin="" href="/assets/index-BqPzICSW.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" crossorigin="" href="/assets/index-BqPzICSW.css"></noscript>
 </head>
