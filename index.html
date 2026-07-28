@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-953761327"></script>
+    <meta charset="UTF-8">
+    <!-- Tags de marketing adiadas até a página principal terminar de carregar. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-953761327');
+      window.addEventListener('load', function () {
+        var gtagScript = document.createElement('script');
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-953761327';
+        gtagScript.async = true;
+        document.head.appendChild(gtagScript);
+        gtag('js', new Date());
+        gtag('config', 'AW-953761327');
+      }, { once: true });
     </script>
 
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1648315026236616');
-    fbq('track', 'PageView');
+    window.addEventListener('load', function () {
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=true;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1648315026236616');
+      fbq('track', 'PageView');
+    }, { once: true });
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1648315026236616&ev=PageView&noscript=1"
@@ -36,14 +44,22 @@
     <meta property="og:title" content="Guía Completa de Proyectos de Robótica Paso a Paso">
     <meta property="og:description" content="Descubre proyectos simples y creativos de robótica que puedes construir en casa con materiales fáciles de conseguir.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/assets/7_dias.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta property="og:image" content="/assets/7_dias.webp">
+    <link rel="preload" as="image" href="/assets/hero_bg_1.webp" fetchpriority="high">
+    <style>
+      :root { --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .font-heading { font-family: var(--font-sans) !important; }
+      html, body { overflow-x: clip; }
+      [data-testid="button-carousel-prev"] { left: .5rem !important; }
+      [data-testid="button-carousel-next"] { right: .5rem !important; }
+      footer p:nth-child(2) { display: none; }
+      @media (min-width: 768px) { [data-testid="button-carousel-prev"] { left: 0 !important; } [data-testid="button-carousel-next"] { right: 0 !important; } }
+      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+    </style>
     <script type="module" crossorigin="" src="/assets/index-C3Rvtp4Y.js"></script>
     <script defer src="/assets/checkout-config.js"></script>
-    <link rel="stylesheet" crossorigin="" href="/assets/index-BqPzICSW.css">
-    <link rel="stylesheet" href="/assets/publication-fixes.css">
+    <link rel="preload" as="style" crossorigin="" href="/assets/index-BqPzICSW.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" crossorigin="" href="/assets/index-BqPzICSW.css"></noscript>
 </head>
 <body>
     <div id="root"></div>
